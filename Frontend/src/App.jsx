@@ -1,8 +1,8 @@
+import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
 import "./App.css";
-import HomePageIndex from "./components/HomePage/HomePageIndex";
 import AboutIndex from "./components/AboutUsPage/AboutIndex";
+import HomePageIndex from "./components/HomePage/HomePageIndex";
 import Layout from "./Layout";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 function App() {
   return (

@@ -1,0 +1,13 @@
+/* ProfilePage.css */
+
+.profile-page-container {
+    display: flex;
+    height: auto;
+}
+
+.profile-page-content {
+    flex: 1;
+    padding: 20px;
+    background-color: #fff;
+    overflow-y: auto;
+}

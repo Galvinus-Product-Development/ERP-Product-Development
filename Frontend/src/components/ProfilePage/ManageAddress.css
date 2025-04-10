@@ -1,0 +1,37 @@
+.manage-address-container {
+    padding: 20px;
+    background: #fff;
+}
+
+.address-list {
+    margin: 20px 0;
+}
+
+.address-item {
+    border: 1px solid #ddd;
+    padding: 10px;
+    margin-bottom: 10px;
+    background: #f9f9f9;
+}
+
+.address-item p {
+    margin: 5px 0;
+}
+
+.address-item button {
+    margin-right: 5px;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+.new-address-form input {
+    display: block;
+    margin: 5px 0;
+    padding: 8px;
+    width: 100%;
+}
+
+.new-address-form button {
+    padding: 8px 15px;
+    cursor: pointer;
+}

@@ -1,0 +1,113 @@
+.not-found-container {
+    text-align: center;
+    height:500px;
+    margin:50px;
+    padding: 50px;
+    /*align-items: center;*/
+    font-family: Arial, sans-serif;
+  }
+  
+  .error-code {
+    font-size: 80px;
+    font-weight: 700;
+    color: #4ba322; 
+  }
+  
+  .error-message {
+    font-size: 28px;
+    margin-bottom: 20px;
+  }
+  
+  .error-description {
+    font-size: 24px;
+    margin-bottom: 30px;
+    color: #585050;
+  }
+  
+  .home-button {
+    display: inline-block;
+    padding: 15px 20px;
+    font-size: 20px;
+    color: #fff;
+    background-color: rgb(81, 170, 25);
+    border: none;
+    text-decoration: none;
+  }
+  
+  .home-button:hover {
+    background-color: #279100; 
+  }
+
+ 
+@media (max-width: 1024px) {
+    .error-code {
+      font-size: 70px;
+    }
+  
+    .error-message {
+      font-size: 20px;
+    }
+  
+    .error-description {
+      font-size: 18px;
+    }
+  
+    .home-button {
+      font-size: 15px;
+      padding: 10px 20px;
+    }
+    .not-found-container {
+        padding: 30px;
+        height: 400px;
+  }
+  }
+
+@media (max-width: 768px) {
+    .error-code {
+      font-size: 60px;
+    }
+  
+    .error-message {
+      font-size: 18px;
+    }
+  
+    .error-description {
+      font-size: 16px;
+    }
+  
+    .home-button {
+      font-size: 15px;
+      padding: 9px 18px;
+      
+    }
+    .not-found-container {
+        padding: 30px;
+        height: 300px;
+  }
+}
+  
+  @media (max-width: 567px) {
+    .error-code {
+      font-size: 50px;
+    }
+  
+    .error-message {
+      font-size: 18px;
+    }
+  
+    .error-description {
+      font-size: 16px;
+    }
+  
+    .home-button {
+      font-size: 15px;
+      padding: 8px 16px;
+    }
+  
+    .not-found-container {
+      padding: 30px;
+      margin:0;
+      height:300px;
+    }
+  }
+  

@@ -1,0 +1,33 @@
+.coupon-summary {
+    background-color: #fff8e1;
+    padding: 1rem;
+    border: 1px solid #ffe082;
+    border-radius: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+   /* margin-top: 1.5rem;
+    margin-bottom: 1rem;*/
+  }
+  
+  .coupon-summary p {
+    margin: 0;
+    color: #795548;
+    font-weight: 500;
+  }
+  
+  .edit-coupon-btn {
+    background-color: transparent;
+    border: 1px solid #795548;
+    padding: 0.3rem 0.8rem;
+    color: #795548;
+    border-radius: 5px;
+    font-size: 0.85rem;
+    cursor: pointer;
+    transition: background 0.2s;
+  }
+  
+  .edit-coupon-btn:hover {
+    background-color: #ffe0b2;
+  }
+  

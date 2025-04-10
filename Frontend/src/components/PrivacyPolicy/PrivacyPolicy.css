@@ -1,0 +1,206 @@
+.privacy-policy {
+    font-family: 'Arial', sans-serif;
+    margin: 0 auto;
+    width: 100%;
+    height:auto;
+    color: #333;
+    line-height: 1.6;
+  }
+  .heading{
+    width:100%;
+    height:400px;
+    background-color: rgb(240, 240, 240);
+  }
+  .privacy-subtitle-heading{
+    padding-top: 80px;
+    font-size: 40px;
+    color: #393636;
+    text-align:center;
+    padding-bottom: 10px;
+  }
+  .privacy-section {
+    margin-bottom: 100px;
+  }
+  .privacy-head-section{
+    margin-left: 300px;
+    margin-right: 300px;
+    padding:15px;
+    margin-bottom: 40px;
+  }
+  .privacy-content-head {
+    font-size: 16px;
+    color: #6a6464;
+    text-align:center;
+    margin-bottom: 15px;
+  }
+  
+
+  .privacy-subtitle-head {
+    font-size: 30px;
+    font-weight: 550;
+    color: #222;
+    text-align:center;
+    padding-bottom: 10px;
+
+  }
+  
+  .privacy-subsubtitle {
+    font-size: 20px;
+    color: #333;
+    margin-top: 20px;
+    margin-bottom: 10px;
+  }
+  
+  .privacy-content {
+    font-size: 16px;
+    color: #555;
+    margin-bottom:15px;
+  }
+  
+  .privacy-content a {
+    color: #007bff;
+    text-decoration: none;
+  }
+  
+  .privacy-content a:hover {
+    text-decoration: underline;
+  }
+
+  .section{
+    margin:40px;
+    box-sizing: border-box;
+    padding: 0 20px ;
+    border:1px rgb(201, 205, 208) solid;
+    border-radius: 1px;
+  }
+
+  @media screen and (max-width: 1024px) {
+
+  
+    .heading {
+        width:100%;
+      height: 400px;
+    }
+  
+    .privacy-subtitle-heading {
+      font-size: 35px;
+      padding-top: 70px;
+    }
+  
+    .privacy-head-section {
+      margin-left: 100px;
+      margin-right: 100px;
+    }
+  
+    .privacy-content-head {
+      font-size: 16px;
+      text-align: center;
+    }
+  
+    .privacy-subtitle-head {
+      font-size: 28px;
+    }
+  
+    .privacy-subsubtitle {
+      font-size: 20px;
+    }
+  
+    .privacy-content {
+      font-size: 16px;
+    }
+  
+    .section {
+      margin: 40px;
+      padding: 20px;
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+  
+  
+    .heading {
+        width:100%;
+      height: 350px;
+    }
+  
+    .privacy-subtitle-heading {
+      font-size: 32px;
+      padding-top: 60px;
+    }
+  
+    .privacy-head-section {
+      margin-left: 50px;
+      margin-right: 50px;
+      font-size: 22px;
+    }
+  
+    .privacy-content-head {
+      font-size: 15px;
+      text-align: center;
+    }
+  
+    .privacy-subtitle-head {
+      font-size: 26px;
+      padding-bottom: 12px;
+    }
+  
+    .privacy-subsubtitle {
+      font-size: 19px;
+    }
+  
+    .privacy-content {
+      font-size: 15px;
+    }
+  
+    .section {
+      margin: 30px;
+      padding: 15px;
+    }
+  }
+
+  @media screen and (max-width: 567px) {
+
+  
+    .heading {
+        width:100%;
+      height: 300px;
+    }
+  
+    .privacy-subtitle-heading {
+      font-size: 28px;
+      padding-top: 40px;
+    }
+  
+    .privacy-head-section {
+      margin-left: 10px;
+      margin-right: 10px;
+      font-size: 18px;
+    }
+  .privacy-section{
+    padding:20px;
+  }
+    .privacy-content-head {
+      font-size: 14px;
+      text-align: center;
+    }
+  
+    .privacy-subtitle-head {
+      font-size: 24px;
+      padding-bottom: 8px;
+    }
+  
+    .privacy-subsubtitle {
+      font-size: 18px;
+      margin-top: 15px;
+    }
+  
+    .privacy-content {
+      font-size: 14px;
+    }
+  
+    .section {
+      margin: 20px 0;
+      padding: 10px 15px;
+    }
+  }
+

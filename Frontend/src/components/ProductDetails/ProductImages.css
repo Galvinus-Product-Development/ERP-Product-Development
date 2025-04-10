@@ -1,0 +1,190 @@
+.product-images {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+    max-width: 100%;
+    width: 100%;
+    margin: 5px auto;
+    gap: 5px;
+  }
+  
+  .thumbnail-column {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    height:555px;
+    max-width: 500px;
+  }
+  
+  .thumbnail {
+    
+    max-width: 180px;
+    height: 180px;
+    object-fit: cover;
+    cursor: pointer;
+    border: 2px solid transparent;
+    border-radius: 5px;
+    transition: transform 0.5s ease, border 0.5s ease;
+  }
+  
+  .thumbnail:hover {
+    transform: scale(1.2); /* Slight zoom on hover */
+    border: 2px solid #d6d7d6; /* Highlight border */
+  }
+  
+  .thumbnail.active {
+    border: 2px solid #d6d7d6;
+  }
+  
+  .main-image-container {
+    position: relative;
+    display: flex;
+  justify-content: center;
+   align-items: center;
+    /* Ensures proper aspect ratio */
+   border-radius: 10px;
+    overflow: hidden;
+    max-width: 100%;
+  }
+  
+  .main-image {
+    width: 100%;
+    max-width: 100%;
+    height: 500px;
+  object-fit: cover;
+  cursor:grab;
+  transition: transform 0.5s ease-in-out;
+  
+  }
+  /* When zooming in, the image should transform */
+.main-image.zoomed {
+  transform: scale(1.5);
+  cursor: grabbing; /* Change to 'grabbing' when zoomed */
+  transition: transform 0.2s ease-in-out;
+}
+  .main-image-container:hover .main-image {
+    transform: scale(1.1); /* Zoom effect on hover */
+  }
+  .slider-button {
+    position: absolute;
+    top: 50%;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    transform: translateY(-50%);
+    z-index: 10;
+    border-radius: 5px;
+  }
+  
+  .slider-button.previous {
+    left: 10px;
+  }
+  
+  .slider-button.next {
+    right: 10px;
+  }
+  
+  .slider-button:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+  }
+  
+  * {
+  box-sizing: border-box;
+}
+
+.container, .main-image-container, .thumbnail-column {
+  overflow: hidden; /* Prevent overflow issues */
+}
+  
+@media (max-width: 1024px) {
+  .product-images {
+    display:flex;
+    justify-content: flex-start;
+    width: 100%;
+      flex-direction: column;
+      align-items: center;
+      margin-left: 15px;
+      gap: 10px;
+  }
+
+  .main-image-container {
+      max-width: 100%;
+  }
+
+  .main-image {
+      height: 500px;
+  }
+  .thumbnail-column {
+    display: flex;
+    flex-direction: row; /* Show thumbnails horizontally */
+    gap: 5px;
+    overflow-x: auto;
+    justify-content: flex-start;
+    width: 100%;
+    height:auto;
+  }
+
+  .thumbnail {
+      width: 150px;
+      height: 150px;
+  }
+}
+
+
+  @media (max-width: 768px) {
+
+    
+    .product-images {
+      flex-direction: column;
+      align-items: center;
+     
+      margin: 0; /* Center content */
+      width: 100%;
+      gap: 5px;
+    }
+  
+    .main-image-container {
+     
+      max-width: 100%; /* Utilize full width */
+      
+      height: 350px;
+      aspect-ratio: 1 / 1;
+  
+    }
+    .main-image {
+      width: 100%;
+      max-height: 400px; /* Further restrict height */
+      object-fit: contain;
+    }
+  
+    .thumbnail-column {
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-start;
+      gap: 5px;
+      overflow-x: auto;
+      width: 100%;
+      height: 120px;
+      margin-top: 10px;
+    }
+  
+    .thumbnail {
+      width: 120px;
+      height: 120px;
+      object-fit: cover;
+      border-radius: 1px;
+    transition: transform 0.5s ease;
+    }
+
+    .thumbnail:hover {
+      transform: scale(1.1); 
+    }
+    .slider-button {
+      padding: 5px 10px;
+      font-size: 14px;
+    }
+  }
+  

@@ -1,0 +1,144 @@
+/* Container & Heading */
+.wishlist-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+}
+
+.wishlist-heading {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  color: #333;
+}
+
+/* Grid Layout */
+.wishlist-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+
+@media (max-width: 900px) {
+  .wishlist-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .wishlist-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Card Base Styles */
+.wishlist-card {
+  position: relative;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  overflow: hidden;
+  transition: transform 0.2s, box-shadow 0.2s;
+  cursor: pointer;
+}
+
+.wishlist-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 4px 16px rgba(0,0,0,0.15);
+}
+
+/* Remove Button (Top-Right) */
+.wishlist-remove-btn {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  background: rgba(255,255,255,0.9);
+  border: none;
+  padding: 6px;
+  border-radius: 50%;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.wishlist-remove-btn:hover {
+  background: #f8d7da;
+  color: #a00;
+}
+
+/* Image */
+.wishlist-card-image img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+/* Info */
+.wishlist-card-info {
+  padding: 1rem;
+}
+
+.wishlist-card-info h4 {
+  margin: 0 0 0.5rem;
+  font-size: 1.1rem;
+  color: #222;
+}
+
+.wishlist-brand,
+.wishlist-category {
+  margin: 0;
+  font-size: 0.9rem;
+  color: #666;
+}
+
+.price-section {
+  margin: 0.75rem 0;
+  display: flex;
+  gap: 0.5rem;
+}
+
+.original-price {
+  text-decoration: line-through;
+  color: #999;
+}
+
+.sale-price {
+  font-weight: bold;
+  color: #e53935;
+}
+
+.stock-status {
+  font-size: 0.85rem;
+  color: #2e7d32;
+}
+
+.out-of-stock .stock-status {
+  color: #d32f2f;
+}
+
+/* Bottom Icons */
+.wishlist-card-bottom-icons {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.75rem 1rem 1rem;
+}
+
+.wishlist-heart-icon {
+  color: #e53935;
+  font-size: 1.2rem;
+}
+
+.wishlist-action-btn {
+  background: rgba(255,255,255,0.9);
+  border: none;
+  padding: 6px;
+  border-radius: 50%;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.wishlist-action-btn:hover {
+  background: #c8e6c9;
+}

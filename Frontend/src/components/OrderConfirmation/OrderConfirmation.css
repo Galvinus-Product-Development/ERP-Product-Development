@@ -1,0 +1,138 @@
+.order-confirmation {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 24px;
+  background-color: var(--white);
+  color: var(--primary-color);
+  border: 1px solid var(--muted-color);
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(30, 42, 56, 0.06);
+}
+
+.confirmation-message {
+  text-align: center;
+  background-color: var(--light-accent-color);
+  padding: 20px;
+  border-radius: 10px;
+  margin-bottom: 24px;
+}
+
+.confirmation-message h2 {
+  font-size: 22px;
+  color: var(--accent-color);
+  margin-bottom: 10px;
+}
+
+.confirmation-message p {
+  font-size: 15px;
+  color: var(--primary-color);
+}
+
+.product-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 16px;
+}
+
+.product-table th,
+.product-table td {
+  text-align: left;
+  padding: 12px 10px;
+  font-size: 14px;
+  border-bottom: 1px solid var(--muted-color);
+  vertical-align: middle;
+}
+
+.product-table img {
+  width: 50px;
+  height: auto;
+  margin-right: 10px;
+  border-radius: 6px;
+  object-fit: cover;
+  vertical-align: middle;
+}
+
+.price-summary {
+  margin-top: 24px;
+  padding: 16px;
+  background-color: var(--light-accent-color);
+  border-radius: 10px;
+}
+
+.price-summary p {
+  margin: 8px 0;
+  font-size: 15px;
+  color: var(--primary-color);
+}
+
+.price-summary b {
+  color: var(--accent-color);
+}
+
+.actions {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 24px;
+}
+
+.detail-btn {
+  background-color: var(--accent-color);
+  color: var(--white);
+  border: none;
+  padding: 10px 20px;
+  font-size: 14px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.detail-btn:hover {
+  background-color: var(--primary-color);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .product-table th,
+  .product-table td {
+    font-size: 13px;
+    padding: 10px;
+  }
+
+  .confirmation-message h2 {
+    font-size: 20px;
+  }
+
+  .confirmation-message p,
+  .price-summary p {
+    font-size: 14px;
+  }
+
+  .detail-btn {
+    width: 100%;
+    padding: 12px;
+    text-align: center;
+  }
+
+  .actions {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .product-table td {
+    display: block;
+    width: 100%;
+    padding: 10px 0;
+    border: none;
+  }
+
+  .product-table tr {
+    display: block;
+    margin-bottom: 16px;
+    border-bottom: 1px solid var(--muted-color);
+  }
+
+  .product-table img {
+    margin-bottom: 8px;
+  }
+}

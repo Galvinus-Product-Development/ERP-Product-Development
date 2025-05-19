@@ -1,0 +1,250 @@
+.filter-header {
+  display: none;
+}
+
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 24px;
+  font-weight: bold;
+  color: var(--primary-color);
+  background-color: var(--white);
+  border: none;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+.close-btn:hover {
+  color: var(--highlight-color);
+}
+
+.filter-group {
+  width: 250px;
+  font-size: 16px;
+  font-family:inherit;
+  margin-bottom: 50px;
+  border-bottom: 0.5px solid var(--muted-color);
+}
+.filter-group h4{
+  color: var(--primary-color);
+}
+.filter-group p{
+  color: var(--primary-color);
+}
+
+.scroll-container {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  width:100%;
+  max-height: 180px;
+  overflow-y: auto;
+  padding: 10px;
+  background-color: var(--white);
+  border: 1px solid var(--muted-color);
+  border-radius: 6px;
+}
+
+
+.scrollContainer::-webkit-scrollbar {
+    width: 5px;
+  }
+  
+  .scrollContainer::-webkit-scrollbar-track {
+    background: var(--background-color);
+    border-radius: 10px;
+  }
+  
+  .scrollContainer::-webkit-scrollbar-thumb {
+    background: var(--muted-color);;
+    border-radius: 10px;
+  }
+  
+  .scrollContainer::-webkit-scrollbar-thumb:hover {
+    background:  var(--accent-color);
+  }
+
+  .scroll-item {
+    display: flex;
+    align-items: center;
+    padding: 8px 10px;
+    margin: 5px 0;
+    color:var(--primary-color) ;
+    cursor: pointer;
+    font-size: 14px;
+   font-weight: 600;
+    text-align: center;
+    transition: color 0.3s ease;
+    
+  }
+  
+  .scroll-item.selected {
+    color:var(--primary-color);
+  }
+  
+  .scroll-item:hover{
+    color:var(--accent-color);
+  }
+  
+  .color-circle {
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    margin-right: 10px;
+    border: 1px solid var(--muted-color);
+  }
+  
+  .text-input {
+    padding: 8px;
+    width: 100%;
+    border: 1px solid var(--muted-color);
+    border-radius: 5px;
+    background-color: var(--white);
+    color: var(--primary-color);
+  }
+  
+  .price-label {
+    display: flex;
+    justify-content: flex-start;
+    margin-top: 10px;
+    font-size: 15px;
+    margin-bottom: 20px;
+    color: var(--primary-color);
+  }
+  button {
+    margin-top: 20px;
+  }
+  
+  button:hover {
+    background-color: var(--hover-accent-color);
+  }
+
+.sidebar {
+  border: 1px solid var(--muted-color);
+  padding: 20px;
+  background-color: var(--white);
+  position: fixed;
+  top: 0;
+  left: -100%; 
+  height: 100%;
+  z-index: 1000;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2);
+  transition: left 0.3s ease;
+}
+
+.sidebar.active {
+  left: 0;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(30, 42, 56, 0.4);
+  z-index: 999;
+  display: none;
+  transition: opacity 0.3s ease;
+}
+
+.overlay.active {
+  display: block;
+  opacity: 1;
+}
+.toggle-btn {
+  display: none;
+  position: fixed;
+  top: 10px;
+  left: 10px;
+  background-color:  var(--white);
+  color: var(--primary-color);
+  border: 1px solid var(--muted-color);
+  border-radius: 5px;
+  padding: 10px 15px;
+  cursor: pointer;
+  z-index: 1100;
+}
+
+@media (max-width: 1024px) {
+  .filter-group {
+    width: 250px;
+    font-size: 15px;
+  }
+
+  .scroll-container {
+    max-height: 160px;
+  }
+
+  .scroll-item {
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 768px) {
+  .filter-group {
+    width: 250px;
+    font-size: 14px;
+    margin-bottom: 40px;
+  }
+
+  .scroll-container {
+    max-height: 140px;
+  }
+
+  .scroll-item {
+    font-size: 12px;
+  }
+
+  .color-circle {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+@media (max-width: 567px) {
+  .filter-group {
+    width: 180px;
+    font-size: 13px;
+    margin-bottom: 30px;
+  }
+
+  .scroll-container {
+    max-height: 120px;
+  }
+
+  .scroll-item {
+    font-size: 11px;
+  }
+
+  .color-circle {
+    width: 18px;
+    height: 18px;
+  }
+}
+
+@media (max-width: 480px) {
+  .filter-group {
+    width: 160px;
+    font-size: 12px;
+    margin-bottom: 20px;
+  }
+
+  .scroll-container {
+    max-height: 100px;
+  }
+
+  .scroll-item {
+    font-size: 10px;
+  }
+
+  .color-circle {
+    width: 15px;
+    height: 15px;
+  }
+
+  .price-label {
+    font-size: 12px;
+  }
+}
+

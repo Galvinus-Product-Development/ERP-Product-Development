@@ -1,0 +1,91 @@
+/* OrderSummary.css */
+.order-summary {
+    display: flex; 
+    gap: 20px; 
+    justify-content: space-between; 
+    align-items: center;
+    flex-wrap: wrap; 
+    margin:30px;
+    padding: 20px;
+    height: auto;
+    background-color: #f9f9f9;
+    border-radius: 10px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    font-family: Arial, sans-serif; 
+  }
+  
+  .order-summary div {
+    display: flex;
+    gap: 10px; 
+    font-size: 16px; 
+    color: #333; 
+  }
+  
+  .order-summary strong {
+    font-weight: bold; 
+  }
+
+  @media (max-width: 1024px) {
+    .order-summary {
+      flex-wrap: wrap; 
+      gap: 15px; 
+      padding: 15px; 
+    }
+    .order-summary div {
+      font-size: 15px; 
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .order-summary {
+      flex-direction: column; 
+      align-items: flex-start; 
+      gap: 15px;
+      padding: 15px; 
+    }
+    .order-summary div {
+      justify-content: flex-start; 
+      flex-wrap: wrap; 
+      gap: 5px; 
+      font-size: 14px; 
+    }
+    .order-summary div span {
+      display: inline-block; 
+      min-width: 120px;
+      font-weight: bold; 
+    }
+  
+    .order-summary div strong {
+      display: inline-block;
+    }
+  }
+  
+
+  @media (max-width: 567px) {
+    .order-summary {
+      margin: 20px; 
+      padding: 10px; 
+      gap: 10px; 
+    }
+    .order-summary div {
+      font-size: 13px; 
+    }
+  }
+  
+
+  @media (max-width: 480px) {
+    .order-summary {
+      margin: 10px; 
+      padding: 10px; 
+      gap: 8px; 
+    }
+    .order-summary div {
+      font-size: 14px; 
+      gap: 5px; 
+    }
+    .order-summary div span {
+      min-width: 100px;
+    }
+
+  }
+  

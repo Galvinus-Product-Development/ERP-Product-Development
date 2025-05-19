@@ -1,0 +1,24 @@
+/* ProfilePage.css */
+
+.profile-page-container {
+   display: flex;
+    flex-direction: row;
+     align-items: stretch;
+    min-height: 100vh;
+    width: 100%;
+    background-color: var(--background-color);
+}
+
+.profile-page-content {
+    flex: 1;
+    padding: 20px;
+    background-color: #fff;
+    overflow-y: auto;
+}
+
+@media (max-width: 1024px) {
+   
+    .profile-page-content {
+        padding: 15px;
+    }
+}

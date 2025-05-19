@@ -1,0 +1,35 @@
+.delivery-address {
+    background-color: #fff;
+    padding: 5px;
+    border-radius: 10px;
+    border: 1px solid #e2e2e2;
+    margin-bottom: 1.5rem;
+  }
+  
+  .delivery-address h3 {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+    color: #222;
+  }
+  
+  .delivery-address p {
+    padding: 3px;
+    color: #444;
+  }
+  
+  .change-address-btn {
+    margin-top: 8px;
+    padding: 7px 8px;
+    background-color: #4c8a2f;
+    color: #fff;
+    border: none;
+    border-radius: 3px !important;
+    cursor: pointer;
+    transition: background 0.3s;
+  }
+  
+  .change-address-btn:hover {
+    background-color: #3d6e26;
+  }
+  

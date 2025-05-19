@@ -1,0 +1,217 @@
+.product-card {
+  width: 100%;
+  max-width: 300px;
+  overflow: hidden;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid var(--muted-color);
+    padding: 12px;
+    margin: 10px;
+    text-align: center;
+    background-color: transparent;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    transition: 0.3s ease;
+    cursor: pointer;
+    max-height: 370px;
+  }
+  
+  .product-card:hover {
+    transform: scale(1.02);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .product-image {
+    flex:1;
+    min-height: 175px;
+    max-height: 280px;
+    background-color: #f9f9f9;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0px;
+    overflow: hidden;
+  }
+  
+  .product-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    
+  }
+
+  .product-info {
+    flex: 1;
+    padding: 10px 0 5px;
+    display: flex;
+    margin: 0 !important;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: transparent !important;
+    gap: 8px !important;
+    text-align: center;
+  }
+  
+  .product-info h4 {
+    display:block;
+    width:100%;
+    font-size: 16px;
+    color: var(--primary-color);
+    text-align: center;
+    font-weight: 500;
+    min-height: 40px;
+  }
+  
+  .price-section {
+    
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    margin:0 !important;
+    justify-content: center !important;
+    font-size: 14px;
+  }
+  
+  .original-price {
+    text-decoration: line-through;
+    color: var(--primary-color);
+  
+  }
+  
+  .sale-price {
+    color:var(--primary-color);
+    font-weight: 600;
+  }
+  
+  .stock-status {
+    margin: 0 !important;
+    font-size: 14px;
+  }
+  
+  .stock-status.in-stock {
+    color: var(--accent-color);
+  }
+  
+  .stock-status.out-of-stock {
+    color: red;
+  }
+  
+  .icon-overlay {
+    width:100%;
+    max-height:0;
+    display: flex;
+    overflow: hidden;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+    gap: 6px;
+    opacity: 0;
+    transform: translateY(10px);
+    transition: max-height 0.4s ease, opacity 0.3s ease, transform 0.3s ease;
+  }
+
+  .product-card:hover .icon-overlay {
+    max-height:60px;
+    opacity: 1;
+    transform: translateY(0);
+  }
+  .icon-btn {
+
+    padding: 6px;
+    background-color: var(--white);
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.15);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.2s ease;
+  }
+  .icon-btn:hover {
+    background-color: transparent;
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.15); /* optional, retain same shadow */
+  }
+  
+  /* Smaller icons */
+.wishlist-icon,
+.add-cart-icon {
+  font-size: 20px;
+  background:transparent;
+  color: var(--muted-color);
+  transition: transform 0.2s ease-in-out, color 0.2s ease;
+}
+
+.wishlist-icon:hover {
+  color: red;
+  background:transparent;
+  transform: scale(1.1);
+}
+.wishlist-icon.added {
+  color: red !important;
+}
+.add-cart-icon:hover {
+  color: var(--primary-color);
+  transform: scale(1.1);
+}
+
+/* Compact select button */
+.select-options-btn {
+  padding: 4px 8px;
+  font-size: 12px;
+  border-radius: 4px;
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: background-color 0.2s ease;
+}
+
+.select-options-btn:hover {
+  background-color: var(--accent-color);
+}
+
+.carousel-card {
+  width: calc((100vw - 160px) / 3);
+  min-width: 300px;
+  max-width: 350px;
+  flex-shrink: 0;
+  scroll-snap-align: start;
+}
+
+
+/* For large screens */
+@media (min-width: 1025px) {
+  .product-card:not(.carousel-card) {
+    width: 100%;
+    max-width: 350px;
+  }
+}
+
+/* Tablets and small laptops */
+@media (max-width: 1024px) {
+  .product-card:not(.carousel-card) {
+    width: 80%;
+    max-width: 80%;
+    min-width: 200px;
+  }
+}
+
+/* Medium to small devices */
+@media (max-width: 768px) {
+  .product-card:not(.carousel-card) {
+    width: 80%;
+    min-width: 20px;
+  }
+}
+
+/* Very small devices (phones) */
+@media (max-width: 480px) {
+  .product-card:not(.carousel-card) {
+    width: 80%;
+    min-width: 200px;
+  }
+}
+

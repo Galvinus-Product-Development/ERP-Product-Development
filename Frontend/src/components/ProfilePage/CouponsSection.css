@@ -1,0 +1,83 @@
+.coupons-container {
+    width: 100%;
+    height:auto;
+    margin:20px auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    
+}
+
+.coupons-container h2{
+    text-align: center;
+    font-size: 35px;
+    font-weight: bold;
+    color: #05154a;
+    margin:30px;
+}
+
+
+.coupons-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.coupon-card {
+    background: white;
+    padding: 15px;
+    width:100%;
+    height:auto;
+    border-radius: 8px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+.coupon-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.coupon-card h3 {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #05154a;
+    margin-bottom: 10px;
+}
+
+.coupon-code {
+    background-color: #05154a;
+    color: white;
+    padding: 5px 12px;
+    border-radius: 5px;
+    display: inline-block;
+    margin-top: 5px;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.coupon-expiry {
+    font-size: 0.9rem;
+    color: #888;
+    margin-top: 5px;
+}
+
+.apply-button {
+    margin-top: 10px;
+    padding: 8px 15px;
+    font-size: 14px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.2s ease-in-out;
+}
+
+.apply-button:hover {
+    background-color: #0056b3;
+}
+.apply-button.applied {
+    background-color: #28a745;
+    cursor: not-allowed;
+}

@@ -1,0 +1,141 @@
+
+.order-details {
+  display:flex;
+  flex-direction:column;
+    margin: 30px auto; 
+    padding: 20px; 
+    max-width: 800px; 
+    background-color: #f5f5f5; 
+    border: 0.5px solid #ddd; 
+    border-radius: 5px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    font-family: Arial, sans-serif; 
+    text-align: left;
+  }
+  
+  .order-details h3 {
+    color: #333; 
+    padding:20px;
+    font-size: 22px; 
+    text-align: center;
+  }
+  
+  .order-details-table {
+    width: 100%; 
+    border-collapse: collapse; 
+    margin-top: 10px; 
+    font-size: 16px;
+  }
+  
+  .order-details-table td, .order-details-table th{
+    padding: 12px 10px; 
+    font-size: 16px; 
+    text-align: left; 
+    vertical-align: middle;
+    border-bottom: 1px solid #ddd; 
+  }
+  
+  .order-details-table th {
+    background-color: #f5f5f5;
+    font-size:18px ;
+    font-weight: 600; 
+
+  }
+  .order-details-table tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+    color:rgb(58, 57, 57); 
+  }
+  .order-details-table tbody tr:nth-child(odd) {
+    background-color: #f9f9f9;
+    color:rgb(58, 57, 57); 
+  }
+  
+  
+  .order-details-table tfoot td {
+    font-weight: 600;
+    color:rgb(38, 37, 37);
+    background-color: #f5f5f5;
+  }
+  
+  /*.order-details-table tr:last-child td {
+    color: #000;
+    font-size: 18px; 
+    font-weight: bolder; 
+  }*/
+  
+  @media (max-width: 1024px) {
+    .order-details {
+      padding: 15px;
+      max-width: 90%;
+    }
+    
+    .order-details h3 {
+      font-size: 20px;
+    }
+  
+    .order-details-table td, .order-details-table th {
+      font-size: 14px;
+    }
+  
+    .order-details-table tr:last-child td {
+      font-size: 16px;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .order-details {
+      padding: 10px;
+      max-width: 95%;
+    }
+  
+    .order-details h3 {
+      font-size: 18px;
+    }
+  
+    .order-details-table td, .order-details-table th {
+      font-size: 12px;
+    }
+  
+    .order-details-table tr:last-child td {
+      font-size: 14px;
+    }
+  }
+  
+  @media (max-width: 567px) {
+    .order-details {
+      padding: 8px;
+      max-width: 100%;
+    }
+  
+    .order-details h3 {
+      font-size: 16px;
+    }
+  
+    .order-details-table td, .order-details-table th {
+      font-size: 12px;
+    }
+  
+    .order-details-table tr:last-child td {
+      font-size: 14px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .order-details {
+      padding: 5px;
+      max-width: 100%;
+    }
+  
+    .order-details h3 {
+      font-size: 14px;
+    }
+  
+    .order-details-table td, .order-details-table th {
+      font-size: 12px;
+      padding: 8px;
+    }
+  
+    .order-details-table tr:last-child td {
+      font-size: 12px;
+    }
+  }

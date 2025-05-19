@@ -1,0 +1,40 @@
+.order-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid #ddd;
+    padding: 16px;
+    margin-bottom: 12px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+  }
+  
+  .order-card-left {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+  }
+  
+  .order-image {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+  }
+  
+  .order-info p {
+    margin: 4px 0;
+  }
+  
+  .status {
+    font-weight: bold;
+  }
+  
+  .details-btn {
+    background-color: #166534;
+    color: white;
+    padding: 8px 16px;
+    border-radius: 6px;
+    border: none;
+    cursor: pointer;
+  }
+  

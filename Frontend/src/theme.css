@@ -1,0 +1,129 @@
+/* theme.css */
+
+:root {
+    /* Primary color palette based on logo */
+    --primary-color: #1E2A38;       /* Deep Navy (main text, header, footer) */
+    --accent-color: #4E9BAE;        /* Teal (hover, links, icons) */
+    --highlight-color: #c8cde7f4;     /* Coral (CTA buttons, important highlights) */
+    --background-color: #e5e6ef;    /* Light warm background */
+    --muted-color: #C5CED3;         /* Gray (borders, tags, muted text) */
+    --white: #ffffff;
+    --black: #000000;
+    --light-accent-color: #e9e9f5; /* Gentle neutral for list items */
+    --hover-accent-color: #eaf1f8; /* Slightly tinted hover */
+    --text-light: #F9EFE7;
+    --light-muted-color: #eff0f2;
+  }
+ 
+  /* Typography */
+  body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--background-color);
+    color: var(--primary-color);
+  }
+  
+  /* Links */
+  a {
+    color: var(--accent-color);
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  
+  a:hover {
+    color: var(--highlight-color);
+  }
+  
+  /* Buttons */
+  .btn {
+    padding: 0.6rem 1.2rem;
+    font-size: 1rem;
+    font-weight: 500;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    background-color: var(--highlight-color);
+    color: var(--white);
+    transition: background-color 0.3s ease;
+  }
+  
+  .btn:hover {
+    background-color: var(--accent-color);
+    color: var(--white);
+  }
+  
+  .btn-outline {
+    background-color: transparent;
+    border: 2px solid var(--highlight-color);
+    color: var(--highlight-color);
+    transition: all 0.3s ease;
+  }
+  
+  .btn-outline:hover {
+    background-color: var(--highlight-color);
+    color: var(--white);
+  }
+  
+  /* Header & Footer */
+  .header,
+  .footer {
+    background-color: var(--primary-color);
+    color: var(--white);
+    padding: 1rem 2rem;
+  }
+  
+  .nav-link {
+    color: var(--white);
+    margin: 0 1rem;
+    transition: color 0.3s ease;
+  }
+  
+  .nav-link:hover {
+    color: var(--highlight-color);
+  }
+  
+  /* Cards */
+  .card {
+    background-color: var(--white);
+    border: 1px solid var(--muted-color);
+    border-radius: 12px;
+    padding: 1rem;
+    box-shadow: 0 4px 12px rgba(30, 42, 56, 0.05);
+    transition: box-shadow 0.3s ease;
+  }
+  
+  .card:hover {
+    box-shadow: 0 6px 18px rgba(30, 42, 56, 0.15);
+  }
+  
+  /* Sections */
+  .section {
+    padding: 3rem 2rem;
+    background-color: var(--background-color);
+  }
+  
+  /* Utility */
+  .text-muted {
+    color: var(--muted-color);
+  }
+  
+  .bg-primary {
+    background-color: var(--primary-color);
+    color: var(--white);
+  }
+  
+  .bg-accent {
+    background-color: var(--accent-color);
+    color: var(--white);
+  }
+  
+  .bg-highlight {
+    background-color: var(--highlight-color);
+    color: var(--white);
+  }
+  
+  .border-muted {
+    border: 1px solid var(--muted-color);
+  }
+  

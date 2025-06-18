@@ -1,0 +1,104 @@
+/* AddressSection.css */
+.address-section {
+    text-align: center;
+    margin: 20px; 
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    font-family: Arial, sans-serif; 
+
+  }
+  
+  .address-section h3 {
+    font-size: 22px; 
+    font-weight: bold; 
+    color: #333; 
+    margin-bottom: 20px; 
+  }
+  
+  .address-section p {
+    font-size: 16px; 
+    line-height: 1.6;
+    color: #555; 
+    margin: 0;
+  }
+  
+  .address-section p span {
+    font-weight: bold; 
+  }
+  .address-grid {
+    display: grid; 
+    grid-template-columns: 1fr 1fr; 
+    gap: 20px; 
+  }
+  
+  .address-column p {
+    font-size: 16px; 
+    line-height: 1.6; 
+    margin-bottom:10px; 
+    text-align:left;
+    color: #555; 
+  }
+  
+  .address-column span {
+    font-weight: bold; 
+  }
+  
+  @media (max-width: 1024px) {
+    .address-grid {
+      grid-template-columns: 1fr 1fr ; 
+      gap:0;
+    }
+    .address-section h3 {
+      font-size: 20px; 
+    }
+  }
+  
+  /* For max-width 768px */
+  @media (max-width: 768px) {
+    .address-section {
+      padding: 15px; 
+    }
+    .address-grid {
+      grid-template-columns: 1fr ; 
+      gap:0; 
+    }
+    .address-section h3 {
+      font-size: 18px; /* Adjust heading size */
+    }
+    .address-column p {
+      font-size: 14px; /* Smaller font size for content */
+    }
+  }
+  
+ 
+  @media (max-width: 567px) {
+    .address-grid {
+      gap: 0; 
+      grid-template-columns: 1fr ; 
+    }
+    .address-section h3 {
+      font-size: 16px; 
+    }
+    .address-section p {
+      font-size: 13px;
+    }
+  }
+  
+ 
+  @media (max-width: 480px) {
+    .address-section {
+      margin: 0;
+      margin-bottom: 30px;
+      padding: 15px; 
+    }
+    .address-grid {
+      gap: 0; 
+      grid-template-columns: 1fr ; 
+    }
+    .address-section h3 {
+      font-size: 14px; 
+    }
+    .address-section p {
+      font-size: 12px;
+    }
+  }

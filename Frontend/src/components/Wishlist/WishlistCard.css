@@ -1,0 +1,120 @@
+.wishlist-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+
+.wishlist-card {
+  position: relative;
+  border: 1px solid var(--muted-color);
+  padding: 1rem;
+  border-radius: 12px;
+  background-color: var(--white);
+  cursor: pointer;
+  transition: box-shadow 0.2s;
+}
+
+.wishlist-card:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+}
+
+.wishlist-remove-btn {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  background: rgba(255, 255, 255, 0.85);
+  border: none;
+  padding: 6px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 0.95rem;
+  color: var(--primary-color);
+}
+
+.wishlist-card-image img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.wishlist-card-info {
+  margin-top: 0.75rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  color: var(--primary-color);
+}
+.wishlist-card-info h4 {
+  color: var(--primary-color); /* Primary color for text */
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.move-to-cart-btn {
+  background-color:var(--primary-color);
+  color: var(--white);
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.move-to-cart-btn:hover {
+  background-color: var(--primary-color);
+  color: var(--white);
+  transform: scale(1.05);
+}
+
+.wishlist-brand,
+.wishlist-category {
+  margin: 4px;
+  font-size: 0.9rem;
+  color: var(--primary-color);
+}
+
+.price-section {
+  display: flex;
+  gap: 0.5rem;
+  font-size: 0.9rem;
+  margin: 0.5rem 0;
+}
+
+.original-price {
+  text-decoration: line-through;
+  color: var(--muted-color);
+}
+
+.sale-price {
+  color: var(--primary-color);
+  font-weight: bold;
+}
+
+.stock-status {
+  font-size: 0.85rem;
+  color: var(--text-light);
+}
+
+.out-of-stock .stock-status {
+  color: var(--muted-color);
+}
+
+.wishlist-card-bottom-icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+}
+
+.wishlist-heart-icon {
+  color: red;
+  font-size: 1.2rem;
+}
+
+.wishlist-action-btn {
+  background: rgba(255, 255, 255, 0.85);
+  border: none;
+  padding: 6px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 0.95rem;
+}

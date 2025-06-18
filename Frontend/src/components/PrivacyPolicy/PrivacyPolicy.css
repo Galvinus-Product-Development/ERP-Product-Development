@@ -1,0 +1,177 @@
+.privacy-policy {
+    font-family: 'Arial', sans-serif;
+    margin: 0 auto;
+    width: 100%;
+    height:auto;
+    color: #333;
+    line-height: 1.6;
+  }
+  .heading{
+    width:100%;
+    height: auto;
+  }
+  .privacy-subtitle-heading{
+    font-size: 40px;
+    color: #393636;
+    text-align:center;
+    padding-bottom: 10px;
+  }
+
+  .privacy-head-section{
+    padding:15px;
+  
+  }
+  .privacy-section{
+    margin:20px;
+  }
+  .privacy-content-head {
+    font-size: 16px;
+    color: #6a6464;
+    text-align:center;
+    margin-bottom: 15px;
+  }
+  
+
+  .privacy-subtitle-head {
+    font-size: 30px;
+    font-weight: 550;
+    color: #222;
+    text-align:center;
+    padding-bottom: 10px;
+
+  }
+  
+  .privacy-subsubtitle {
+    font-size: 20px;
+    color: #333;
+  
+  }
+  
+  .privacy-content {
+    font-size: 16px;
+    color: #555;
+    
+  }
+  
+  .privacy-content a {
+    color: #007bff;
+    text-decoration: none;
+  }
+  
+  .privacy-content a:hover {
+    text-decoration: underline;
+  }
+
+  .section{
+   margin-bottom: 0px !important;
+    box-sizing: border-box;
+    padding: 0 20px ;
+    border:1px rgb(201, 205, 208) solid;
+    border-radius: 1px;
+  }
+  @media (max-width: 1024px) {
+    .privacy-subtitle-heading {
+      font-size: 32px;
+    }
+  
+    .privacy-subtitle-head {
+      font-size: 24px;
+    }
+  
+    .privacy-subsubtitle {
+      font-size: 18px;
+    }
+  
+    .privacy-content {
+      font-size: 15px;
+    }
+  
+    .privacy-section {
+      margin: 15px;
+    }
+  
+    .section {
+      padding: 15px;
+    }
+  }
+  
+  /* For tablets */
+  @media (max-width: 768px) {
+    .privacy-subtitle-heading {
+      font-size: 28px;
+    }
+  
+    .privacy-subtitle-head {
+      font-size: 22px;
+    }
+  
+    .privacy-subsubtitle {
+      font-size: 16px;
+    }
+  
+    .privacy-content {
+      font-size: 14px;
+    }
+  
+    .privacy-section {
+      margin: 10px;
+    }
+  
+    .section {
+      padding: 12px;
+    }
+  }
+  
+  /* For mobile phones (landscape) */
+  @media (max-width: 576px) {
+    .privacy-subtitle-heading {
+      font-size: 24px;
+    }
+  
+    .privacy-subtitle-head {
+      font-size: 20px;
+    }
+  
+    .privacy-subsubtitle {
+      font-size: 15px;
+    }
+  
+    .privacy-content {
+      font-size: 13.5px;
+    }
+  
+    .section {
+      padding: 10px;
+    }
+  }
+  
+  /* For mobile phones (portrait) */
+  @media (max-width: 480px) {
+    .privacy-subtitle-heading {
+      font-size: 22px;
+    }
+  
+    .privacy-subtitle-head {
+      font-size: 18px;
+    }
+  
+    .privacy-subsubtitle {
+      font-size: 14px;
+    }
+  
+    .privacy-content {
+      font-size: 13px;
+    }
+  
+    .section {
+      padding: 8px;
+    }
+  
+    .privacy-head-section {
+      padding: 10px;
+    }
+  
+    .privacy-section {
+      margin: 8px;
+    }
+  }

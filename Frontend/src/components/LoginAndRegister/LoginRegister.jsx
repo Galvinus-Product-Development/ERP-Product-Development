@@ -1,16 +1,20 @@
-import React, { useState } from "react";
-import Popup from "../../utils/Popup";
+import { useState } from "react";
 import { GoogleLogin } from "react-google-login";
+import { useNavigate } from "react-router-dom";
+import { toast } from "react-toastify";
+//import Popup from "../../utils/Popup";
+// import { GoogleLogin } from "react-google-login";
 import "./LoginRegister.css";
 
 const LoginRegister = () => {
+  const navigate = useNavigate();
   const [isLoginPage, setIsLoginPage] = useState(true);
   const [formData, setFormData] = useState({
     username: "",
     email: "",
     password: "",
   });
-  const [popup, setPopup] = useState({ visible: false, message: "", type: "" });
+  //const [popup, setPopup] = useState({ visible: false, message: "", type: "" });
   const googleClientId = import.meta.env.VITE_GOOGLE_CLIENT_ID;
 
   const handleChange = ({ target: { name, value } }) => {
@@ -22,22 +26,22 @@ const LoginRegister = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-  
+
     const deviceId = localStorage.getItem("deviceId") || generateDeviceId();
     const userAgent = navigator.userAgent;
-  
+
     const url = isLoginPage
       ? "http://localhost:5000/api/auth/login"
       : "http://localhost:5000/api/auth/register";
-  
+
     const headers = {
       "Content-Type": "application/json",
       Authorization: `Bearer ${localStorage.getItem("accessToken") || ""}`,
       "x-refresh-token": localStorage.getItem("refreshToken") || "",
-      "x-device-id": deviceId,  // Send deviceId in headers
-      "user-agent": userAgent,   // Send user agent in headers
+      "x-device-id": deviceId, // Send deviceId in headers
+      "user-agent": userAgent, // Send user agent in headers
     };
-  
+
     try {
       const response = await fetch(url, {
         method: "POST",
@@ -50,146 +54,78 @@ const LoginRegister = () => {
           userAgent: userAgent,
         }),
       });
-  
+
       const data = await response.json();
-  
+
       if (response.ok) {
-        setPopup({
-          visible: true,
-          message: data.message || "Success",
-          type: "success",
-        });
+        toast.success(
+          isLoginPage ? "Login successful!" : "Registration successful!"
+        );
         if (data.accessToken)
           localStorage.setItem("accessToken", data.accessToken);
         if (data.refreshToken)
           localStorage.setItem("refreshToken", data.refreshToken);
+
+        //  Redirect to homepage after login
+        if (isLoginPage) {
+          navigate("/");
+        }
       } else {
-        setPopup({
-          visible: true,
-          message: data.error || "An error occurred",
-          type: "error",
-        });
+        toast.error(data.error || "Something went wrong. Please try again.");
       }
     } catch (error) {
       console.error("Error:", error);
-      setPopup({
-        visible: true,
-        message: `An unexpected error occurred. Please try again.${error}`,
-        type: "error",
-      });
+      toast.error("Unexpected error occurred. Please try again.");
     }
   };
+
   
-  const handleLogout = async () => {
-    try {
-      // Collect device information
-      const deviceInfo = {
-        userAgent: navigator.userAgent,  // Fetch user agent from the browser
-      };
-  
-      const headers = {
-        "Content-Type": "application/json",
-        Authorization: `Bearer ${localStorage.getItem("accessToken") || ""}`,
-        "x-refresh-token": localStorage.getItem("refreshToken") || "",
-        "x-device-id": localStorage.getItem("deviceId") || "",  // Send device ID in headers (same as login)
-        "user-agent": navigator.userAgent,   // Send user agent in headers
-      };
-  
-      const response = await fetch("http://localhost:5000/api/auth/logout", {
-        method: "POST",
-        headers,
-        body: JSON.stringify({ deviceInfo }),  // Send device info with logout request
-      });
-  
-      if (response.ok) {
-        // Clear tokens from storage
-        localStorage.clear();
-        sessionStorage.clear();
-        setPopup({
-          visible: true,
-          message: "Logged out successfully!",
-          type: "success",
-        });
-      } else {
-        const data = await response.json();
-        setPopup({
-          visible: true,
-          message: data.error || "Logout failed!",
-          type: "error",
-        });
-      }
-    } catch (error) {
-      console.error("Logout Error:", error);
-      setPopup({
-        visible: true,
-        message: "An unexpected error occurred during logout.",
-        type: "error",
-      });
-    }
-  };
-  
-  
+
   const responseGoogle = async (response) => {
     try {
       if (response.tokenId) {
         // Collect device information
         const deviceInfo = {
-          userAgent: navigator.userAgent,  // Get user agent from the browser
+          userAgent: navigator.userAgent, // Get user agent from the browser
         };
-  
+
         const headers = {
           "Content-Type": "application/json",
           Authorization: `Bearer ${localStorage.getItem("accessToken") || ""}`,
           "x-refresh-token": localStorage.getItem("refreshToken") || "",
-          "x-device-id": localStorage.getItem("deviceId") || generateDeviceId(),  // Send device ID (if available)
+          "x-device-id": localStorage.getItem("deviceId") || generateDeviceId(), // Send device ID (if available)
           "user-agent": navigator.userAgent,
         };
-  
+
         // Send the Google token and device info to the backend
         const res = await fetch("http://localhost:5000/api/auth/google-login", {
           method: "POST",
           headers,
           body: JSON.stringify({
             tokenId: response.tokenId,
-            deviceInfo,  // Send device info with the request
+            deviceInfo, // Send device info with the request
           }),
         });
-  
+
         const data = await res.json();
         if (res.ok) {
-          setPopup({
-            visible: true,
-            message: data.message || "Google login successful!",
-            type: "success",
-          });
-          if (data.accessToken) localStorage.setItem("accessToken", data.accessToken);
-          if (data.refreshToken) localStorage.setItem("refreshToken", data.refreshToken);
+          toast.success("Google login successful!");
+          if (data.accessToken)
+            localStorage.setItem("accessToken", data.accessToken);
+          if (data.refreshToken)
+            localStorage.setItem("refreshToken", data.refreshToken);
+          navigate("/");
         } else {
-          setPopup({
-            visible: true,
-            message: data.error || "Google login failed.",
-            type: "error",
-          });
+          toast.error(data.error || "Google login failed.");
         }
       } else {
-        setPopup({
-          visible: true,
-          message: "Google login did not return a valid token.",
-          type: "error",
-        });
+        toast.error("Google login did not return a valid token.");
       }
     } catch (error) {
-      console.error("Error during Google login:", error);
-      setPopup({
-        visible: true,
-        message: "An error occurred during Google login. Please try again.",
-        type: "error",
-      });
+      console.error("Google Login Error:", error);
+      toast.error("Error during Google login. Try again.");
     }
   };
-  
-  
-
   const generateDeviceId = () => {
     const deviceId = `device-${Math.random().toString(36).substr(2, 9)}`;
     localStorage.setItem("deviceId", deviceId);
@@ -197,12 +133,105 @@ const LoginRegister = () => {
   };
 
 
-
-  const closePopup = () => {
-    setPopup({ visible: false, message: "", type: "" });
-  };
-
   return (
+    <div className="login-register-container">
+      
+      <div className="form-wrapper">
+        <h2 className="form-heading">{isLoginPage ? "Login" : "Register"}</h2>
+        <form onSubmit={handleSubmit} className="form">
+          {!isLoginPage && (
+            <>
+              <label htmlFor="username" className="form-label">
+                Username <span className="required-asterisk">*</span>
+              </label>
+              <input
+                type="text"
+                id="username"
+                name="username"
+                className="form-input"
+                placeholder="Enter your username"
+                value={formData.username}
+                onChange={handleChange}
+                required
+              />
+            </>
+          )}
+
+          <label htmlFor="email" className="form-label">
+            Email Address <span className="required-asterisk">*</span>
+          </label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            className="form-input"
+            placeholder="Enter your email"
+            value={formData.email}
+            onChange={handleChange}
+            required
+          />
+
+          <label htmlFor="password" className="form-label">
+            Password <span className="required-asterisk">*</span>
+          </label>
+          <input
+            type="password"
+            id="password"
+            name="password"
+            className="form-input"
+            placeholder="Enter your password"
+            value={formData.password}
+            onChange={handleChange}
+            required
+          />
+          <div className="form-footer">
+                <a href="/password-reset" className="lost-password">
+                  Lost your password?
+                </a>
+              </div>
+
+          <button type="submit" className="form-btn">
+            {isLoginPage ? "Login" : "Register"}
+          </button>
+
+          <p className="switch-page-text">
+          {isLoginPage
+            ? "Haven’t registered yet? "
+            : "Already have an account? "}
+          <span className="switch-link" onClick={() => setIsLoginPage(!isLoginPage)}>
+            {isLoginPage ? "Register first!" : "Login here!"}
+          </span>
+        </p>
+
+          {isLoginPage && (
+            <>
+              
+              <div className="or-login">
+                <p>OR LOGIN WITH</p>
+              </div>
+              <div className="social-login">
+                <GoogleLogin
+                  clientId={googleClientId}
+                  buttonText="Login with Google"
+                  onSuccess={responseGoogle}
+                  onFailure={responseGoogle}
+                  cookiePolicy={"single_host_origin"}
+                  className="social-btn google-btn"
+                />
+              </div>
+            </>
+          )}
+        </form>
+
+        
+      </div>
+    </div>
+  );
+};
+
+export default LoginRegister;
+
+  /*return (
     <div className="login-register-container">
       {popup.visible && (
         <Popup message={popup.message} type={popup.type} onClose={closePopup} />
@@ -321,3 +350,41 @@ const LoginRegister = () => {
 };
 
 export default LoginRegister;
+
+const handleLogout = async () => {
+    try {
+      // Collect device information
+      const deviceInfo = {
+        userAgent: navigator.userAgent, // Fetch user agent from the browser
+      };
+
+      const headers = {
+        "Content-Type": "application/json",
+        Authorization: `Bearer ${localStorage.getItem("accessToken") || ""}`,
+        "x-refresh-token": localStorage.getItem("refreshToken") || "",
+        "x-device-id": localStorage.getItem("deviceId") || "", // Send device ID in headers (same as login)
+        "user-agent": navigator.userAgent, // Send user agent in headers
+      };
+
+      const response = await fetch("http://localhost:5000/api/auth/logout", {
+        method: "POST",
+        headers,
+        body: JSON.stringify({ deviceInfo }), // Send device info with logout request
+      });
+      const data = await response.json();
+
+
+      if (response.ok) {
+        // Clear tokens from storage
+        localStorage.clear();
+        sessionStorage.clear();
+        toast.success("Logged out successfully!");
+      } else {
+        toast.error(data.error || "Logout failed!");
+      }
+    } catch (error) {
+      console.error("Logout Error:", error);
+      toast.error("Unexpected error occurred during logout.");
+    }
+  };
+*/

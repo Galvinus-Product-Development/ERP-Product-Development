@@ -1,0 +1,62 @@
+/* Container */
+.orders-page {
+  max-width: 960px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+  color: #333;
+}
+
+/* Page Title */
+.orders-title {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  text-align: center;
+  color: #222;
+}
+.order-heading{
+  font-size: 18px;
+}
+
+@media (min-width: 1024px) {
+  .orders-page {
+    padding: 0 2rem;
+  }
+
+}
+
+/* Tablets */
+@media (max-width: 1023px) {
+  .orders-page {
+    max-width: 720px;
+  }
+  
+}
+
+/* Mobile devices */
+@media (max-width: 767px) {
+  .orders-page {
+    max-width: 100%;
+    margin: 1rem auto;
+    padding: 0 1rem;
+  }
+  
+  .orders-title {
+    font-size: 1.6rem;
+  }
+  
+  .order-heading {
+    font-size: 1rem;
+  }
+}
+
+/* Small phones */
+@media (max-width: 480px) {
+  .orders-title {
+    font-size: 1.4rem;
+  }
+  
+  .order-heading {
+    font-size: 0.9rem;
+  }
+}

@@ -1,23 +1,21 @@
-import React, { useState } from "react";
-import { useParams } from "react-router-dom";
-import Popup from "../../utils/Popup"; // Assumes you have a reusable Popup component
+import { useState } from "react";
+import { useNavigate, useParams } from "react-router-dom";
+//import Popup from "../../utils/Popup"; // Assumes you have a reusable Popup component
+import { toast } from "react-toastify";
 import "./ResetPassword.css"; // Styles
 
 const ResetPassword = () => {
   const { token } = useParams();
+  const navigate = useNavigate();
   const [password, setPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
-  const [popup, setPopup] = useState({ visible: false, message: "", type: "" });
+  //const [popup, setPopup] = useState({ visible: false, message: "", type: "" });
 
   const handleSubmit = async (e) => {
     e.preventDefault();
 
     if (password !== confirmPassword) {
-      setPopup({
-        visible: true,
-        message: "Passwords do not match.",
-        type: "error",
-      });
+      toast.error("Passwords do not match.");
       return;
     }
 
@@ -33,36 +31,20 @@ const ResetPassword = () => {
       const data = await response.json();
 
       if (response.ok) {
-        setPopup({
-          visible: true,
-          message: "Password reset successfully.",
-          type: "success",
-        });
+        toast.success("Password reset successfully.");
+        setTimeout(() => {
+          navigate("/my-account"); // change "/login" to your actual login route
+        }, 1500);
       } else {
-        setPopup({
-          visible: true,
-          message: data.error || "Failed to reset password.",
-          type: "error",
-        });
+        toast.error(data.error || "Failed to reset password.");
       }
-    } catch (error) {
-      setPopup({
-        visible: true,
-        message: "An unexpected error occurred. Please try again.",
-        type: "error",
-      });
+    } catch {
+      toast.error("An unexpected error occurred. Please try again.");
     }
-  };
-
-  const closePopup = () => {
-    setPopup({ visible: false, message: "", type: "" });
   };
 
   return (
     <div className="reset-password-container">
-      {popup.visible && (
-        <Popup message={popup.message} type={popup.type} onClose={closePopup} />
-      )}
       
       <form onSubmit={handleSubmit} className="reset-form">
       <h2 className="reset-heading">Set Your New Password</h2>

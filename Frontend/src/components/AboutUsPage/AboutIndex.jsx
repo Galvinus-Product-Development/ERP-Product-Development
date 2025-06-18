@@ -7,10 +7,10 @@ function AboutIndex() {
   return (
     <>
       <AboutUs />
-      <OnlineStoreInfo/>
-      <TeamSection/>
-      <AboutSection/>
-      <VideoSection/>
+      <OnlineStoreInfo />
+      <TeamSection />
+      <AboutSection />
+      <VideoSection />
     </>
   );
 }

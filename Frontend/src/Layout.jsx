@@ -1,17 +1,21 @@
 import React from "react";
 import { Outlet } from "react-router-dom";
-import Navbar from "./components/HomePage/navbar";
-import Footer from "./components/HomePage/footer";
-import Menu from "./components/HomePage/Menu";
-import MenuSecond from "./components/HomePage/MenuSecond";
+import Footer from "./components/Homepage/components/footer";
+import Header from "./components/Homepage/components/Header";
+import MenuSecond from "./components/Homepage/components/MenuSecond";
+import Navbar from "./components/Homepage/components/navbar";
+//import MenuSecond from "./components/HomePage/MenuSecond";
 
 const Layout = () => {
   return (
     <>
-      <Navbar />
-      <Menu/>
-      <MenuSecond/>
+      {/* <Navbar /> */}
+      <Header />
+      {/* <MenuSecond /> */}
       <Outlet />
+      {/*  <Menu/>
+      <MenuSecond/>
+      */}
       <Footer />
     </>
   );

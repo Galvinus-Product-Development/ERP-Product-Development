@@ -1,0 +1,62 @@
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 50;
+}
+
+.modal-content {
+  background: white;
+  padding: 24px;
+  border-radius: 8px;
+  text-align: center;
+  max-width: 320px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.modal-image {
+  width: 96px;
+  margin-bottom: 16px;
+}
+
+.price {
+  margin-bottom: 16px;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.modal-actions {
+  display: flex;
+  justify-content: space-around;
+  gap: 16px;
+}
+
+.track-btn {
+  background-color: #166534;
+  color: white;
+  padding: 10px 16px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.cancel-btn {
+  background-color: #b91c1c;
+  color: white;
+  padding: 10px 16px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.close-btn {
+  margin-top: 16px;
+  font-size: 14px;
+  color: #666;
+  background: none;
+  border: none;
+  cursor: pointer;
+}

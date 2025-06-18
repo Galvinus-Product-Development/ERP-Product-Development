@@ -1,0 +1,40 @@
+/* ProfileDropdown.css */
+.profile-dropdown {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  margin-top: 0px;
+  background-color: white;
+  border: 1px solid #ccc;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  border-radius: 6px;
+  z-index: 1000;
+  padding: 8px;
+  width: 200px;
+  }
+  
+  .profile-dropdown ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .profile-dropdown li {
+    padding: 10px 16px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: background-color 0.2s ease;
+  }
+  
+  .profile-dropdown li:hover {
+    background-color: #f0f0f0;
+  }
+  
+  .profile-dropdown li:last-child {
+    border-bottom: none;
+  }
+  .profile-dropdown li svg {
+    margin-right: 8px; /* Add some space between the icon and text */
+  }

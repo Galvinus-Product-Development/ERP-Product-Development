@@ -1,0 +1,149 @@
+.empty-cart {
+    display: flex;
+    font-family: Arial, sans-serif;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 40px 15px;
+    background-color: #ffffff; /* Light background */
+    min-height: 0vh; /* Ensures the content is vertically centered */
+  }
+  
+  .empty-cart img {
+    width: 200px; /* Adjust based on your design */
+    height: 250px;
+    margin-top: 20px;
+    margin-bottom: 8px; /* Space below the image */
+  }
+  
+  .empty-cart h2 {
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;
+    line-height: 1.2;
+    color: #242424; /* Dark text */
+    margin-bottom: 15px;
+  }
+  
+  .wd-empty-page-text {
+    
+    margin-inline: auto;
+    text-align: center;
+    margin-bottom: 0;
+    color: #767474; /* Softer dark text */
+    max-width: 535px; /* Limits the text width for readability */
+  }
+  
+  .wd-empty-page-text br {
+    margin-top: 10px; /* Space between lines */
+  }
+  .return-to-shop{
+    margin-top: 25px;
+    margin-bottom: 25px;
+    padding: 5px 28px;
+    height:50px;
+  }
+  
+  .empty-cart button {
+    background-color: #83b735; /* Button color */
+    color: #fff;
+    box-shadow: var(--btn-accented-box-shadow);
+    border: none;
+    padding: 12px 18px;
+    border-radius: 0;
+    font-size: 14px;
+    font-weight: var(--btn-accented-font-weight, var(--btn-font-weight, 600));
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    text-transform: var(--btn-accented-transform, var(--btn-transform, uppercase));
+  }
+  
+  .empty-cart button:hover {
+    background-color: #74a32f; /* Darker shade on hover */
+    box-shadow: var(--btn-accented-box-shadow-hover);
+  }
+  
+  .empty-cart button:focus {
+    outline: none;
+    box-shadow: 0 0 5px #74a32f; /* Focus outline */
+  }
+
+  
+  
+  /* Medium to large devices (max-width: 1024px) */
+  @media (max-width: 1024px) {
+    .empty-cart{
+        padding: 10px 15px;
+    }
+    .empty-cart img {
+      width: 200px; /* Default size */
+      height: auto;
+    }
+  
+    .empty-cart h1 {
+      font-size: 42px; /* Slightly smaller than default */
+    }
+  
+    .wd-empty-page-text {
+      font-size: 16px;
+      max-width: 450px; /* Slightly reduce max width */
+    }
+  
+    .empty-cart button {
+      padding: 14px 22px;
+      font-size: 16px; /* Default button font size */
+    }
+  }
+
+  
+  /* Small to medium devices (max-width: 768px) */
+@media (max-width: 768.98px) {
+    .empty-cart{
+        padding: 10px 12px;
+    }
+    .empty-cart img {
+      width: 150px; /* Slightly larger than on small devices */
+      height: auto;
+    }
+  
+    .empty-cart h1 {
+      font-size: 32px; /* Medium font size for heading */
+    }
+  
+    .wd-empty-page-text {
+      font-size: 16px;
+      max-width: 400px; /* Adjust max width */
+    }
+  
+    .empty-cart button {
+      padding: 12px 20px;
+      font-size: 14px; /* Slightly larger button font size */
+    }
+  }
+
+  @media (max-width: 576px) {
+    .empty-cart{
+        padding: 10px 12px;
+    }
+    .empty-cart img {
+      width: 150px; /* Smaller image */
+      height: auto;
+    }
+  
+    .empty-cart h1 {
+      font-size: 28px; /* Smaller font size for heading */
+    }
+  
+    .wd-empty-page-text {
+      font-size: 14px; /* Smaller font size for text */
+      max-width: 300px; /* Reduce max width */
+    }
+  
+    .empty-cart button {
+      padding: 10px 15px;
+      font-size: 12px; /* Smaller button font size */
+    }
+  }
+
+  

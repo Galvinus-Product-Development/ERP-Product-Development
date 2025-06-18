@@ -1,0 +1,54 @@
+.delivery-address {
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 20px;
+    margin-bottom: 2rem;
+  }
+  
+  .delivery-address h3 {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+    color: #222;
+  }
+  
+.address-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap; /* Keeps it responsive */
+  gap: 10px;
+}
+
+.address-details p {
+  padding: 3px 0;
+  color: #444;
+  margin: 0;
+}
+
+.change-address-btn {
+  padding: 7px 12px;
+  background-color: #4c8a2f;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background 0.3s;
+  white-space: nowrap;
+}
+
+.change-address-btn:hover {
+  background-color: #3d6e26;
+}
+
+/* Mobile responsiveness 
+@media (max-width: 576px) {
+  .address-row {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .change-address-btn {
+    align-self: flex-start;
+  }
+}*/

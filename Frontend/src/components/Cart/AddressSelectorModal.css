@@ -1,0 +1,138 @@
+.modal-container {
+    background-color: #fff;
+    max-width: 600px;
+    width: 100%;
+    max-height: 90vh;
+    overflow-y: auto;
+    border-radius: 10px;
+    padding: 20px;
+    position: relative;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    animation: fadeIn 0.3s ease-in-out;
+  }
+  
+.modal-addresscart-actions {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+    flex-wrap: wrap;
+  }
+  
+  .modal-addresscart-actions button {
+    padding: 8px 16px;
+    border: none;
+    border-radius: 4px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  .add-addresscart-button {
+    display: block;
+    margin: 1rem auto 0 !important;
+    padding: 10px 20px;
+    font-size: 1rem;
+    background-color: #05154a;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  .add-addresscart-button:hover{
+    background-color: #05154a;
+  }
+  
+  /* Deliver Here button */
+  .modal-addresscart-actions button:first-child {
+    background-color: #2e7d32;
+    color: white;
+  }
+  
+  .modal-addresscart-actions button:first-child:hover {
+    background-color: #1b5e20;
+  }
+  
+  /* Edit button */
+  .modal-addresscart-actions button:last-child {
+    background-color: #0288d1;
+    color: white;
+  }
+  
+  .modal-addresscart-actions button:last-child:hover {
+    background-color: #01579b;
+  }
+  @media (max-width: 1024px) {
+    .modal-container {
+      max-width: 90vw;
+      max-height: 90vh;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .modal-container {
+      width: 95vw;
+      padding: 16px;
+      border-radius: 8px;
+    }
+  
+    .address-item {
+      font-size: 14px;
+    }
+  
+    .modal-addresscart-actions {
+      flex-direction: column;
+      gap: 8px;
+    }
+  
+    .modal-addresscart-actions button {
+      width: 100%;
+    }
+  
+    .add-addresscart-button {
+      font-size: 15px;
+    }
+  }
+  
+  @media (max-width: 567px) {
+    .modal-container {
+      width: 100vw;
+      height: 100vh;
+      padding: 12px;
+      border-radius: 0;
+    }
+  
+    .modal-container h2 {
+      font-size: 18px;
+      text-align: center;
+    }
+  
+    .address-item {
+      padding: 12px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .modal-container {
+      padding: 10px;
+    }
+  
+    .modal-addresscart-actions button {
+      font-size: 14px;
+      padding: 10px;
+    }
+  
+    .add-addresscart-button {
+      font-size: 14px;
+      padding: 12px;
+    }
+  }
+  @keyframes fadeIn {
+    from {
+      transform: translateY(20px);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }

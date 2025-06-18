@@ -1,0 +1,143 @@
+.order-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  border-radius: 10px;
+  background-color: #ffffff;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  transition: box-shadow 0.2s ease;
+  flex-wrap: wrap;
+}
+
+.order-card:hover {
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+}
+
+.order-card-left {
+ 
+  display: flex;
+  justify-content: space-evenly;
+  width: 60%;
+  align-items: center;
+  gap: 1rem;
+  
+}
+
+.order-image {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 8px;
+  background-color: #f3f3f3;
+}
+
+.order-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.order-info p {
+  margin: 0.3rem 0;
+  font-size: 0.95rem;
+}
+
+.order-info strong {
+  color: #333;
+}
+
+.status {
+  padding: 0.3rem 0.6rem;
+  border-radius: 5px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  width: fit-content;
+}
+
+.status.CONFIRMED {
+  background-color: #fff3cd;
+  color: #856404;
+}
+
+.status.SHIPPED {
+  background-color: #d1ecf1;
+  color: #0c5460;
+}
+
+.status.DELIVERED {
+  background-color: #d4edda;
+  color: #155724;
+}
+
+.status.CANCELLED {
+  background-color: #f8d7da;
+  color: #721c24;
+}
+
+.status.REFUNDED {
+  background-color: #e2e3e5;
+  color: #383d41;
+}
+
+.details-btn {
+  background-color: #4a90e2;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  padding: 0.6rem 1rem;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  white-space: nowrap;
+  margin:0 auto;
+  /* align-self: flex-end; */
+}
+
+.details-btn:hover {
+  background-color: #357ac8;
+}
+
+/* ------------- Responsive Layouts ------------- */
+
+/* Tablets (768px - 1023px) */
+@media (max-width: 1023px) {
+  .order-card {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .order-card-left {
+    flex-direction: row;
+    width: 100%;
+  }
+
+  .order-info {
+    flex: 1;
+  }
+
+
+}
+
+/* Mobile (<= 767px) */
+@media (max-width: 767px) {
+  .order-card-left {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .order-info {
+    align-items: center;
+  }
+
+
+
+  .order-image {
+    width: 80px;
+    height: 80px;
+  }
+}

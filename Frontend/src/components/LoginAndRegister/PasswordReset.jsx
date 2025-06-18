@@ -1,10 +1,11 @@
-import React, { useState } from "react";
-import Popup from "../../utils/Popup"; // Assumes you have a reusable Popup component
+import { useState } from "react";
+//import Popup from "../../utils/Popup"; // Assumes you have a reusable Popup component
+import { toast } from "react-toastify";
 import "./PasswordReset.css"; // Styles
 
 const PasswordReset = () => {
   const [email, setEmail] = useState("");
-  const [popup, setPopup] = useState({ visible: false, message: "", type: "" });
+  //const [popup, setPopup] = useState({ visible: false, message: "", type: "" });
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -21,36 +22,17 @@ const PasswordReset = () => {
       const data = await response.json();
 
       if (response.ok) {
-        setPopup({
-          visible: true,
-          message: "Password reset link sent to your email.",
-          type: "success",
-        });
+        toast.success("Password reset link sent to your email.");
       } else {
-        setPopup({
-          visible: true,
-          message: data.error || "Failed to send reset email.",
-          type: "error",
-        });
+        toast.error(data.error || "Failed to send reset email.");
       }
-    } catch (error) {
-      setPopup({
-        visible: true,
-        message: "An unexpected error occurred. Please try again.",
-        type: "error",
-      });
+    } catch {
+      toast.error("An unexpected error occurred. Please try again.");
     }
-  };
-
-  const closePopup = () => {
-    setPopup({ visible: false, message: "", type: "" });
   };
 
   return (
     <div className="password-reset-container">
-      {popup.visible && (
-        <Popup message={popup.message} type={popup.type} onClose={closePopup} />
-      )}
       
       <form onSubmit={handleSubmit} className="reset-form">
       <h2 className="reset-heading">Reset Your Password</h2>

@@ -1,0 +1,76 @@
+.grid-list-view {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 10px;
+    cursor: pointer;
+  }
+  
+  .grid-list-view svg {
+    margin-left: 10px;
+    cursor: pointer;
+  }
+  
+  .product-card {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 10px;
+    text-align: center;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  .product-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+  }
+  
+  .old-price {
+    text-decoration: line-through;
+    color: gray;
+  }
+  
+  .new-price {
+    color: red;
+    font-weight: bold;
+  }
+  
+  .view-details-button {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    margin-top: 10px;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+  }
+  
+  .view-details-button:hover {
+    background-color: #555;
+  }
+  
+  .pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    gap: 10px;
+  }
+  
+  .page-button {
+    margin: 5px;
+    padding: 8px 12px;
+    background-color: #ddd;
+    color: #333;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .page-button.active {
+    background-color: #28a745;
+    color: white;
+  }
+  

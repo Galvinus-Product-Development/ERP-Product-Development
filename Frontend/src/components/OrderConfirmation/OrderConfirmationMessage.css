@@ -1,0 +1,96 @@
+.confirmation-message {
+    width:100%;
+    height:auto;
+    justify-content: center;
+    text-align: center;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    margin: 0 auto;
+    background-color: #f9f9f9;
+
+  }
+  
+  .tick-icon {
+    font-size: 100px;
+    color: green;
+    margin-bottom: 25px;
+   
+  }
+  
+  h1 {
+    color: #333;
+    font-size: 28px;
+    margin-bottom: 10px;
+  }
+  
+  p {
+    color: #555;
+    font-size: 16px;
+    margin-top: 0;
+  }
+
+  @media (max-width: 1024px) {
+    .confirmation-message {
+      padding: 15px; 
+    }
+    .tick-icon {
+      font-size: 90px; 
+    }
+    h1 {
+      font-size: 26px; 
+    }
+    p {
+      font-size: 15px; 
+    }
+  }
+  
+ 
+  @media (max-width: 768px) {
+    .confirmation-message {
+      padding: 10px; 
+    }
+    .tick-icon {
+      font-size: 80px; 
+      margin-bottom: 20px; 
+    }
+    h1 {
+      font-size: 24px; 
+    }
+    p {
+      font-size: 14px;
+    }
+  }
+  
+
+  @media (max-width: 567px) {
+    .confirmation-message {
+      padding: 8px; 
+    }
+    .tick-icon {
+      font-size: 70px; 
+    }
+    h1 {
+      font-size: 22px; 
+    }
+    p {
+      font-size: 13px;
+    }
+  }
+  
+
+  @media (max-width: 480px) {
+    .confirmation-message {
+      padding: 5px; 
+    }
+    .tick-icon {
+      font-size: 60px; 
+      margin-bottom: 15px; 
+    }
+    h1 {
+      font-size: 20px; 
+    }
+    p {
+      font-size: 12px; 
+    }
+  }
+ 

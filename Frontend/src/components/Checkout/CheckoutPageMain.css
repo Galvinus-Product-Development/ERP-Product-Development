@@ -1,0 +1,107 @@
+.checkout-main-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  font-family: inherit;
+}
+
+.checkout-heading {
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 2rem;
+  text-align: center;
+  color: #222;
+}
+
+.checkout-section {
+  margin-bottom: 2.5rem;
+  padding: 1.5rem;
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+  background-color: #f9fafb;
+}
+
+
+
+.payment-section {
+  width: 220px; 
+  margin: 0 auto; 
+  display: block;
+}
+.payment-section button {
+  width: fit-content;
+  padding: 0.75rem 2rem;
+  font-size: 1rem;
+  font-weight: 600;
+  background-color: #1e40af;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  display: block;
+  margin: 0 auto; /* center the button */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.payment-section button:hover {
+  background-color: #1c3aa9;
+  transform: translateY(-2px);
+}
+
+.payment-section button:active {
+  background-color: #192e99;
+  transform: translateY(0);
+}
+
+
+@media (max-width: 1024px) {
+  .checkout-main-container {
+    padding: 1.5rem;
+  }
+
+  .checkout-heading {
+    font-size: 1.75rem;
+  }
+
+  .payment-heading {
+    font-size: 1.3rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .checkout-main-container {
+    padding: 1rem;
+  }
+
+  .checkout-section,
+  .payment-section {
+    padding: 1rem;
+  }
+
+  .checkout-heading {
+    font-size: 1.5rem;
+  }
+
+  .checkout-section h3 {
+    font-size: 1.1rem;
+  }
+
+  .payment-heading {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .checkout-heading {
+    font-size: 1.25rem;
+  }
+
+  .checkout-section h3,
+  .payment-heading {
+    font-size: 1rem;
+  }
+}

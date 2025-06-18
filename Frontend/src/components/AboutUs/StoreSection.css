@@ -1,0 +1,113 @@
+.store-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  background-color: #f7f7f7;
+  padding: 60px 40px;
+  flex-wrap: wrap;
+}
+
+.store-section img {
+  width: 100%;
+  max-width: 500px;
+  object-fit: cover;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.store-description {
+  flex: 1;
+  max-width: 500px;
+}
+
+.store-description h3 {
+  font-size: 28px;
+  font-weight: 700;
+  color: #222;
+  margin-bottom: 20px;
+}
+
+.store-description p {
+  font-size: 16px;
+  line-height: 1.8;
+  color: #555;
+}
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.store-section {
+  animation: fadeInUp 0.8s ease-out;
+}
+
+@media (max-width: 1024px) {
+  .store-section {
+    flex-direction: column;
+    padding: 50px 30px;
+    text-align: center;
+  }
+
+  .store-description h3 {
+    font-size: 24px;
+  }
+
+  .store-description p {
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 768px) {
+  .store-section {
+    padding: 40px 20px;
+  }
+
+  .store-description {
+    max-width: 100%;
+  }
+
+  .store-description h3 {
+    font-size: 22px;
+  }
+
+  .store-description p {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 567px) {
+  .store-section {
+    gap: 20px;
+    padding: 30px 15px;
+  }
+
+  .store-section img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .store-description h3 {
+    font-size: 20px;
+  }
+
+  .store-description p {
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 480px) {
+  .store-description h3 {
+    font-size: 18px;
+  }
+
+  .store-description p {
+    font-size: 12.5px;
+  }
+}
